@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.cagesandcreatures.controllers.MenuController">
+    <children>
+        <VBox alignment="TOP_CENTER" layoutY="89.0" prefHeight="597.0" prefWidth="601.0" spacing="40.0">
+            <children>
+                <Label fx:id="playerChooseTitle" text="Player 1, choose your class">
+                    <font>
+                        <Font size="24.0" />
+                    </font>
+                </Label>
+                <VBox alignment="TOP_CENTER" prefHeight="78.0" prefWidth="401.0">
+                    <children>
+                        <Label text="Name">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                        <TextField fx:id="characterName" prefHeight="25.0" prefWidth="248.0" promptText="Enter name here..." />
+                    </children>
+                </VBox>
+                <VBox alignment="TOP_CENTER" prefHeight="78.0" prefWidth="401.0">
+                    <children>
+                        <Label text="Class">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                        <ComboBox fx:id="classSelection" onAction="#displayClassStats" prefHeight="25.0" prefWidth="418.0" />
+                    </children>
+                </VBox>
+                <VBox alignment="TOP_CENTER" prefHeight="183.0" prefWidth="301.0" spacing="20.0">
+                    <children>
+                        <Label text="Stats">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                        <HBox prefHeight="18.0" prefWidth="301.0" spacing="15.0">
+                            <children>
+                                <Label minWidth="62.0" text="Health" />
+                                <ProgressBar fx:id="healthBar" prefHeight="18.0" prefWidth="241.0" progress="0.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="18.0" prefWidth="301.0" spacing="15.0">
+                            <children>
+                                <Label minWidth="62.0" text="Strength" />
+                                <ProgressBar fx:id="strengthBar" prefHeight="18.0" prefWidth="241.0" progress="0.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="18.0" prefWidth="301.0" spacing="15.0">
+                            <children>
+                                <Label minWidth="62.0" text="Speed" />
+                                <ProgressBar fx:id="speedBar" prefHeight="18.0" prefWidth="241.0" progress="0.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="18.0" prefWidth="301.0" spacing="15.0">
+                            <children>
+                                <Label minWidth="62.0" text="Agility" />
+                                <ProgressBar fx:id="agilityBar" prefHeight="18.0" prefWidth="241.0" progress="0.0" />
+                            </children>
+                        </HBox>
+                        <HBox prefHeight="18.0" prefWidth="301.0" spacing="15.0">
+                            <children>
+                                <Label minWidth="62.0" text="Intelligence" />
+                                <ProgressBar fx:id="intelligenceBar" prefHeight="18.0" prefWidth="241.0" progress="0.0" />
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <Button fx:id="confirmCharacter" mnemonicParsing="false" onAction="#submitPlayer" text="Submit" />
+            </children>
+            <padding>
+                <Insets left="150.0" right="150.0" />
+            </padding>
+        </VBox>
+        <ComboBox fx:id="numPlayers" layoutX="-157.0" layoutY="17.0" prefWidth="150.0" visible="false" />
+    </children>
+</AnchorPane>
